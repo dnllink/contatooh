@@ -1,17 +1,20 @@
-angular.module('contatooh').controller('ContatosController', function($scope) {
+angular.module('contatooh').controller('ContatosController', function ($scope, $http) {
     
     $scope.total = 0;
     
-    $scope.incrementa = function() {
+    $scope.contatos = [];
+
+    $scope.filtro = '';
+    
+    $scope.incrementa = function () {
         $scope.total++;
     };
     
-    $scope.contatos = [
-        {_id: 1, nome: 'Tyrion Lanister', email: 'contato1@email.com'},
-        {_id: 2, nome: 'Jon Snow', email: 'contato2@email.com'},
-        {_id: 3, nome: 'Ned Stark', email: 'contato3@email.com'}
-    ];
-    
-    $scope.filtro = '';
+    $http.get('/contatos').success(function (data) {
+        $scope.contatos = data;
+    }).error(function (statusText) {
+        console.log('[ERRO] Não foi possível obter a lista de contatos');
+        console.log('[STATUSTEXT] ' + statusText);
+    });
     
 });

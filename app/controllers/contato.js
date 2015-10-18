@@ -1,4 +1,8 @@
-var contatos = [{_id: 1, nome: 'Contato 1', email: 'contato1@email.com'}, {_id: 2, nome: 'Contato 2', email: 'contato2@email.com'}, {_id: 3, nome: 'Contato 3', email: 'contato3@email.com'}];
+var contatos = [
+        {_id: 1, nome: 'Tyrion Lanister', email: 'contato1@got.com'},
+        {_id: 2, nome: 'Jon Snow', email: 'contato2@got.com'},
+        {_id: 3, nome: 'Ned Stark', email: 'contato3@got.com'}
+    ];
 
 module.exports = function() {
     var controller = {};
