@@ -1,6 +1,5 @@
 var express = require('express');
 
-//var home = require('../app/routes/home');
 var load = require('express-load');
 var bodyParser = require('body-parser');
 
@@ -16,7 +15,6 @@ module.exports = express.exports = function () {
     app.use(bodyParser.json());
     app.use(require('method-override')());
     
-    //home(app);
     load('models', {cwd: 'app'}).then('controllers').then('routes').into(app);
     
     return app;
