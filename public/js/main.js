@@ -1,4 +1,6 @@
-angular.module('contatooh', ['ngRoute', 'ngResource']).config(function($routeProvider) {
+angular.module('contatooh', ['ngRoute', 'ngResource']).config(function($routeProvider, $httpProvider) {
+    
+    $httpProvider.defaults.useXDomain = true;
     
     $routeProvider.when('/contatos', {
         templateUrl: 'partials/contatos.html',
@@ -13,6 +15,11 @@ angular.module('contatooh', ['ngRoute', 'ngResource']).config(function($routePro
     $routeProvider.when('/contato', {
         templateUrl: 'partials/contato.html',
         controller: 'ContatoController'
+    });
+    
+    $routeProvider.when('/enderecos', {
+        templateUrl: 'partials/enderecos.html',
+        controller: 'EnderecoController'
     });
     
     $routeProvider.otherwise({redirectTo: '/contatos'});

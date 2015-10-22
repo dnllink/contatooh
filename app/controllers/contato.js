@@ -46,6 +46,28 @@ module.exports = function(app) {
     };
     
     controller.salvaContato = function (req, res) {
+        
+        var _id = req.body._id;
+        
+        if(_id){
+            Contato.findByIdAndUpdate(_id, req.body).exec()
+            .then(function () {
+                res.status(201).json(contato);
+            },
+                 function (erro) {
+                console.error(erro);
+                res.status(500).json(erro);
+            });
+        } else {
+            Contato.create(req.body)
+            .then(function (contato) {
+                res.status(201).json(contato);
+            },
+                 function (erro) {
+               console.log(erro);
+                res.status(500).json(erro)
+            });
+        }
     
     };
     

@@ -1,0 +1,22 @@
+<div class="jumbotron">
+    <h1 class="text-center">Bem Vindo ao Contatooh</h1>
+</div>
+<p ng-show="mensagem.texto">{{mensagem.texto}}</p>
+<p ng-show="enderecos.length">Encontrados: {{enderecos.length}}</p>
+<p ng-hide="enderecos.length" class="text-info">Não há enderecos cadastrados</p>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <tr>
+            <th>UF</th>
+            <th>RUA</th>
+        </tr>
+        <tr ng-repeat="endereco in enderecos">
+            <td>
+                {{endereco.uf}}
+            </td>
+            <td>
+                {{endereco.logradouro_curto}}
+            </td>
+        </tr>
+    </table>
+</div>
