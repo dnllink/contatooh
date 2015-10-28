@@ -4,6 +4,12 @@ angular.module('contatooh').controller('ContatoController', function ($scope, $r
     
     $scope.contato = new Contato();
     
+    $scope.contatos = [];
+    
+    Contato.query(function (contatos) {
+        $scope.contatos = contatos;
+    });
+    
     if ($routeParams.contatoId) {
     
         Contato.get({id: $routeParams.contatoId}, function (contato) {
