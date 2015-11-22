@@ -17,7 +17,7 @@ before_install:
     - npm install -g protractor@1.5
     - webdriver-manager update
     - bower install    
-befor_script:
+before_script:
     - node test/data.js
     - grunt
     - cd dist    
