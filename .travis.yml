@@ -3,13 +3,7 @@ node_js:
     - 0.10
 notifications:
     - dnllink@hotmail.com
-services:
-    - mongodb
-env:
-    global:
-    - NODE_ENV: test
-addons:
-    sauce_connect: true
+    
 before_install:
     - npm install -g bower@1.3
     - npm install -g grunt-cli@0.1
@@ -17,11 +11,10 @@ before_install:
     - npm install -g protractor@1.5
     - webdriver-manager update
     - bower install
-before_script:
-    - node test/data.js
+    
+befor_script:
     - grunt
-    - cd dist    
+    - cd dist
+    
 script:
     - karma start config/karma.config --single-run --browsers PhantomJS
-    - node server &
-    - protractor config/protractor.js
