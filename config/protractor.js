@@ -18,4 +18,4 @@ exports.config = {
         browser.driver.findElement(by.id('password')).sendKeys(config.seleniumUserPassword);
         browser.driver.findElement(by.name('commit')).click();
     }
-}
+};
