@@ -33,6 +33,6 @@ deploy:
   password:
     secure: a4UWSuUQhserU3i9rCPuLLUXRMwsVUaT3TrdnLXtUzCIx4vXj/nr7WGcWGzf4cW1J99g/Y4YmSn2BNjlIVrI4wDFFdlOpi+bLUOR9kLb54T2mZzfBouQPUfFh9NUd7tHwutl/keIEjOqrN2V3Ya0wVG/qZs79IjMjKu7ypb74yjHMpTkRcCwtekvwpAv3iBFK+ec7vNAc0kZ2//53Wl3Nw+pB3eRS7vW/n2F23A2HOwewXDPJRAeSFQb+PPuyA/Q+ob4050S8YgE44m9CY+Ds46tSqp4c6B0I9R3CSdBd4/+DxyYu1bAbPlCg45QbHS26E2c0lPIUw/3k1j4C/XKfPeOhFKRjAKJ1V2tE21rC2APGT3Wjt8KDJVwp/VHXC6iV30Sl/FgdMDXGtI8QT4bcixp2krHyIwUlCF+6CJJqv0+ATCvIhicxMjMkB+aJsOftO5SlOQz16PUkN8fjSFQuqqe+kxxDc6LrYIQQHCXbVA4MStYnoHGXPtiROe59lhWG7fxyJC6Ov7GJusZigRg+2wSZzA1KlZsK8M4DVPsSJgmFMbqT4kDP16xDaZYsmn87WmR0GPJBF4adwvWuplr+K65ZYW7/6LBKPpKswElGOzNu3MAKBeOp1kKUEZ1q/On2jf2WV05DPrL83nBkJoguV52IIyU03Z7H5W3yEVu5Bo=
   app: contatooh
-  domain: http://contatooh-bonaldoapps.rhcloud.com/
+  domain: contatooh-bonaldoapps.rhcloud.com
   on:
     repo: dnllink/contatooh
