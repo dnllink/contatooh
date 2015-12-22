@@ -3,8 +3,8 @@ node_js:
 - 0.1
 notifications:
 - dnllink@hotmail.com
-services:
-- mongodb
+#services:
+#- mongodb
 env:
   global:
   - NODE_ENV: production
@@ -16,7 +16,7 @@ before_install:
 - webdriver-manager update
 - bower install
 before_script:
-- node test/data.js
+#- node test/data.js
 - grunt minifica
 script:
 - karma start config/karma.config --single-run --browsers PhantomJS
