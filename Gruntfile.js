@@ -11,7 +11,7 @@ module.exports = function (grunt) {
                 root: 'public',
                 dest: 'public'
             },
-            html: 'app/views/**/*.js'
+            html: 'app/views/**/*.ejs'
         },
 
         ngAnnotate: {
